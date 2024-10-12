@@ -12,8 +12,8 @@ import org.jsoup.nodes.Element
 
 class FaselHD : MainAPI() {
     override var lang = "ar"
-    override var mainUrl = "https://faselhd.club"
-    private  val alternativeUrl = "https://www.faselhd.club"
+    override var mainUrl = "https://www.faselhds.care"
+    private  val alternativeUrl = "https://faslhd.com"
     override var name = "FaselHD"
     override val usesWebView = false
     override val hasMainPage = true
@@ -44,13 +44,13 @@ class FaselHD : MainAPI() {
         )
     }
     override val mainPage = mainPageOf(
-            "$mainUrl/all-movies/page/" to "جميع الافلام",
-            "$mainUrl/movies_top_views/page/" to "الافلام الاعلي مشاهدة",
-            "$mainUrl/dubbed-movies/page/" to "الأفلام المدبلجة",
-            "$mainUrl/movies_top_imdb/page/" to "الافلام الاعلي تقييما IMDB",
-            "$mainUrl/series/page/" to "مسلسلات",
-            "$mainUrl/recent_series/page/" to "المضاف حديثا",
-            "$mainUrl/anime/page/" to "الأنمي",
+            "$mainUrl/all-movies/" to "جميع الافلام",
+            "$mainUrl/movies_top_views/" to "الافلام الاعلي مشاهدة",
+            "$mainUrl/dubbed-movies/" to "الأفلام المدبلجة",
+            "$mainUrl/movies_top_imdb/" to "الافلام الاعلي تقييما IMDB",
+            "$mainUrl/series/" to "مسلسلات",
+            "$mainUrl/most_recent/" to "المضاف حديثا",
+            "$mainUrl/anime/" to "الأنمي",
         )
 
     override suspend fun getMainPage(page: Int, request : MainPageRequest): HomePageResponse {
