@@ -9,7 +9,7 @@ import org.jsoup.nodes.Element
 
 class Akwam : MainAPI() {
     override var lang = "ar"
-    override var mainUrl = "https://ak.sv"
+    override var mainUrl = "https://akw.me"
     override var name = "Akwam"
     override val usesWebView = false
     override val hasMainPage = true
@@ -35,9 +35,9 @@ class Akwam : MainAPI() {
         )
     }
     override val mainPage = mainPageOf(
-            "$mainUrl/movies?page=" to "Movies",
-            "$mainUrl/series?page=" to "Series",
-            "$mainUrl/shows?page=" to "Shows"
+            "$mainUrl/movies/" to "Movies",
+            "$mainUrl/series/" to "Series",
+            "$mainUrl/shows" to "Shows"
     )
 
     override suspend fun getMainPage(page: Int, request : MainPageRequest): HomePageResponse {
