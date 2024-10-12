@@ -11,7 +11,7 @@ import org.jsoup.nodes.Element
 
 class MyCima : MainAPI() {
     override var lang = "ar"
-    override var mainUrl = "https://wecima.tube"
+    override var mainUrl = "https://wecima.movie"
     override var name = "MyCima"
     override val usesWebView = false
     override val hasMainPage = true
@@ -47,10 +47,10 @@ class MyCima : MainAPI() {
     }
     override val mainPage = mainPageOf(
             "$mainUrl/movies/top/page/" to "Top Movies",
-            "$mainUrl/movies/page/" to "New Movies",
-            "$mainUrl/movies/recent/page/" to "Recently Added Movies",
-            "$mainUrl/seriestv/top/page/" to "Top Series",
-            "$mainUrl/seriestv/new/page/" to "New Series",
+            "$mainUrl/category/أفلام/10-movies-english-افلام-اجنبي/" to "New Movies",
+            "$mainUrl/movies/" to "Recently Added Movies",
+            "$mainUrl/seriestv/" to "Top Series",
+            "$mainUrl/category/مسلسلات/6-series-english-مسلسلات-اجنبي/" to "New Series",
         )
 
     override suspend fun getMainPage(page: Int, request : MainPageRequest): HomePageResponse {
